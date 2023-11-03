@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<<<<<<< HEAD
+    <title>URL Shortener</title>
+    <link rel="icon" href="static/images/Url.png" type="image/x-icon">
+
+</head>
+<body>
+<style>
+    a{
+    text-decoration:none;
+    color:chartreuse;
+    font-size: 25px;
+    }
+    body{
+    text-align:center;
+    margin-top:10%;
+    background-image:url("static/images/B.png");
+    background-size: cover;
+    background-repeat:no-repeat;
+    }
+    input{
+    margin-top:10%;
+    width:20%;
+    height:25px;
+    }
+    button{
+    color:white;
+    background-color:green;
+    height:30px;
+    width:90px;
+    padding:5px;
+    border-radius:4px;
+    margin-top:5%;
+    margin-bottom:5%;
+    }
+    p{
+        color:aquamarine;
+        font-size: 30px;
+    }
+</style>
+
+=======
+    <title>URL SHORTENER</title>
+</head>
+<form style="text-align:center;">
+<h1>URL -Shortener</h1>
+=======
+    <!-- Add your HTML head content here -->
+</head>
+<body>
+>>>>>>> d484c1fe1be52a8ae9a666b5fbb485a5b724896d
+
+    <form method="POST">
+        <input type="text" name="long_url" placeholder="Enter URL" id="link">
+        <br>
+        <button type="submit" onclick="f()">Shorten</button>
+
+    </form>
+
+    <br>
+
+    {% if short_url %}
+    <p>The shortened Link is:</p>
+    <a href="{{ short_url }}">{{ short_url }}</a>
+    {% endif %}
+<<<<<<< HEAD
+<script>
+    function f(){
+   var K = document.getElementById("link").value;
+   if (K == null || K.trim() === '') {
+      window.alert("Input must not be empty");
+   }
+}
+
+</script>
+=======
+
+</form>
+>>>>>>> d484c1fe1be52a8ae9a666b5fbb485a5b724896d
+
+</body>
+</html>
