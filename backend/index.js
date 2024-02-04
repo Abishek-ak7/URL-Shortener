@@ -10,16 +10,13 @@ const url = 'mongodb://localhost:27017';
 
 // Specify CORS options
 const corsOptions = {
-  origin: 'https://url-shortener-sigma-roan.vercel.app', // Replace with your React app's URL
+  origin: 'https://url-shortener-sigma-roan.vercel.app', 
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,
-  optionsSuccessStatus: 204,
-  allowedHeaders: ['Content-Type', 'Authorization'], // Add the necessary headers
-  exposedHeaders: ['Content-Type', 'Authorization'], // Add the necessary headers
+  optionsSuccessStatus: 204 // some legacy browsers choke on 204
 };
 
-
-// Middleware to enable CORS with specified options
+// Enable CORS with the options
 app.use(cors(corsOptions));
 
 // Middleware to parse JSON
