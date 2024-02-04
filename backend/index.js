@@ -14,7 +14,10 @@ const corsOptions = {
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,
   optionsSuccessStatus: 204,
+  allowedHeaders: ['Content-Type', 'Authorization'], // Add the necessary headers
+  exposedHeaders: ['Content-Type', 'Authorization'], // Add the necessary headers
 };
+
 
 // Middleware to enable CORS with specified options
 app.use(cors(corsOptions));
