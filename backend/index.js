@@ -6,7 +6,7 @@ const { MongoClient } = require('mongodb');
 const app = express();
 const port = 3001;
 
-const url = 'mongodb://localhost:27017/';
+const url = 'mongodb+srv://sreeabishek215:ABISHEKabishek7.@cluster0.nq4tdbi.mongodb.net/?retryWrites=true&w=majority';
 
 // Middleware to enable CORS
 app.use(cors());
