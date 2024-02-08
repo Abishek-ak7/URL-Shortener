@@ -19,7 +19,7 @@ const InputComponent = () => {
     }
   
     try {
-      const response = await fetch('/submit', {
+      const response = await fetch('https://url-shortener-7.vercel.app/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
