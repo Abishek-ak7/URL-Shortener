@@ -9,12 +9,12 @@ const port = 3001;
 const url = 'mongodb://localhost:27017';
 
 // Specify CORS options
-const corsOptions = {
-  origin: 'https://url-shortener-sigma-roan.vercel.app', 
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  credentials: true,
-  optionsSuccessStatus: 204 // some legacy browsers choke on 204
-};
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', 'https://url-shortener-blks.vercel.app');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+  res.header('Access-Control-Allow-Headers', 'Content-Type');
+  next();
+});
 
 // Enable CORS with the options
 app.use(cors(corsOptions));
