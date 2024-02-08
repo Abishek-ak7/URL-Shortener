@@ -19,7 +19,7 @@ const InputComponent = () => {
     }
   
     try {
-      const response = await fetch('https://url-shortener-a831.onrender.com/submit', {
+      const response = await fetch('/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
